@@ -3,7 +3,7 @@
 - [**Consulta**](#consulta)
 - [**Exame**](#exame)
 
-![Entidades_Trabalho](assets\entidades.png)
+![Entidades_Trabalho](assets/entidades.png)
 
 ## Consulta
 
@@ -17,14 +17,14 @@ Ao analisar os atributos da tabela de **Consulta**, observa-se que ela concentra
 
 Para evitar esses problemas e **atender aos princípios de normalização**, os dados foram devidamente separados em duas entidades distintas: **Paciente** e **Médico**, cada uma responsável por armazenar exclusivamente os atributos pertinentes ao seu domínio. Essa decomposição reduz a redundância, melhora a integridade dos dados e facilita as operações de inserção, atualização e exclusão no banco.
 
-![Entidades_medicoPaciente](assets\medicopaciente.drawio.png)
+![Entidades_medicoPaciente](assets/medicopaciente.drawio.png)
 
 > Observação: *"Seria interessante poder ter múltiplos médicos atendendo a uma mesma consulta (consulta multidisciplinar)."*
 
 Considerando a nova estrutura das entidades, para adicionar diferentes médicos à mesma consulta sem incorrer em anomalias, é necessário criar uma nova entidade que represente esse relacionamento **n para n**. Dessa forma, foi adicionada a entidade **ConsultaMedico**, que viabiliza o vínculo de múltiplos médicos a uma única consulta, mantendo a integridade e a normalização do modelo de dados.
 
 
-![Entidades_consultaMedico](assets\consultamedico.drawio.png)
+![Entidades_consultaMedico](assets/consultamedico.drawio.png)
 
 ## Exame
 
@@ -38,7 +38,7 @@ Ao analisar os atributos da tabela de **Exame**, observa-se que ela também conc
 
 Para evitar esses problemas e **atender aos princípios de normalização**, os dados foram devidamente separados em uma nova entidade: **Laboratório**, responsável por armazenar exclusivamente os atributos pertinentes ao seu domínio.
 
-![Entidades_labexame](assets\labexame.drawio.png)
+![Entidades_labexame](assets/labexame.drawio.png)
 
 ## Receita
 
