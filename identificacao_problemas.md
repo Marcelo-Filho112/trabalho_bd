@@ -25,8 +25,15 @@ Para evitar esses problemas e **atender aos princípios de normalização**, os 
 
 Considerando a nova estrutura das entidades, para adicionar diferentes médicos à mesma consulta sem incorrer em anomalias, é necessário criar uma nova entidade que represente esse relacionamento **n para n**. Dessa forma, foi adicionada a entidade **ConsultaMedico**, que viabiliza o vínculo de múltiplos médicos a uma única consulta, mantendo a integridade e a normalização do modelo de dados.
 
-
 ![Entidades_consultaMedico](assets/consultamedico.drawio.png)
+
+> Observação: *"O tratamento pode envolver múltiplas ações (medicação, fisioterapia, cirurgia, etc.)."*
+
+Considerando a nova estrutura das entidades, para adicionar diferentes tratamentos à mesma consulta sem incorrer em anomalias, é necessário criar uma nova entidade que represente esse relacionamento **n para n**. 
+
+Dessa forma, foi adicionada a entidade **ConsultaTratamento**, que viabiliza o vínculo de múltiplos tratamentos a uma única consulta — e de uma mesma consulta a diversos tratamentos — mantendo a **integridade referencial** e assegurando a **normalização do modelo de dados**.
+
+![Entidades_consultaMedico](assets\consulttatratamento.drawio.png)
 
 ## Exame
 
@@ -52,7 +59,7 @@ Para evitar esses problemas e manter o modelo normalizado, foi criada uma nova e
 
 Além disso, como há uma relação **n para n** entre **Receita** e **Medicamento**, foi criada uma tabela auxiliar chamada **ReceitaMedicamento**, que permite associar múltiplos medicamentos a uma única receita e, ao mesmo tempo, reutilizar medicamentos em diferentes receitas sem redundância.
 
-PS: Colocar imagem aqui
+![Entidade_receita](assets/receitamedicamento.drawio.png)
 
 ## Pagamento
 

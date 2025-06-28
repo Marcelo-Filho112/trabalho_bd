@@ -36,13 +36,12 @@ CREATE TABLE Consulta (
     DataConsulta DATE,
     Sintomas TEXT,
     Diagnostico TEXT,
-    Tratamento TEXT,
 );
 
--- CREATE TABLE Tratamento (
---     TratamentoID SERIAL PRIMARY KEY,
---     Nome TEXT,
--- )
+CREATE TABLE Tratamento (
+    TratamentoID SERIAL PRIMARY KEY,
+    Nome TEXT,
+)
 
 CREATE TABLE ConsultaTratamento (
     ConsultaID INT,
@@ -84,19 +83,18 @@ CREATE TABLE Receita (
 );
 
 CREATE TABLE Medicamento (
-    ReceitaID INT,
+    MedicamentoID SERIAL PRIMARY KEY,
     Nome VARCHAR(255),
     Dosagem VARCHAR(100),
     Frequencia VARCHAR(100),
     Duracao VARCHAR(100),
-    PRIMARY KEY (ReceitaID, Nome)
 );
 
--- CREATE TABLE ReceitaMedicamento (
---     ReceitaID INT,
---     MedicamentoID INT,
---     PRIMARY KEY (ReceitaID, MedicamentoID)
--- )
+CREATE TABLE ReceitaMedicamento (
+    ReceitaID INT,
+    MedicamentoID INT,
+    PRIMARY KEY (ReceitaID, MedicamentoID)
+)
 
 CREATE TABLE Pagamento (
     PagamentoID SERIAL PRIMARY KEY,
