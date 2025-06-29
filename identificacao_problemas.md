@@ -33,7 +33,7 @@ Considerando a nova estrutura das entidades, para adicionar diferentes tratament
 
 Dessa forma, foi adicionada a entidade **ConsultaTratamento**, que viabiliza o vínculo de múltiplos tratamentos a uma única consulta — e de uma mesma consulta a diversos tratamentos — mantendo a **integridade referencial** e assegurando a **normalização do modelo de dados**.
 
-![Entidades_consultaMedico](assets\consulttatratamento.drawio.png)
+![Entidades_consultaMedico](assets/consulttatratamento.drawio.png)
 
 ## Exame
 
@@ -69,7 +69,6 @@ A estrutura original da tabela `pagamento` apresentava **múltiplas responsabili
 - **Anomalia de modificação**: ao atualizar o percentual de cobertura de um convênio, seria necessário alterar todas as ocorrências desse dado em diferentes linhas da tabela, aumentando o risco de inconsistências.
 - **Anomalia de remoção**: ao excluir um pagamento, informações importantes sobre o convênio poderiam ser perdidas, caso estivessem apenas associadas a esse pagamento.
 
-PS: Colocar imagem aqui
 
 > Observação: *O pagamento pode ser feito de forma parcelada ou com múltiplas formas de pagamento.*
 
@@ -77,7 +76,6 @@ A nova modelagem permite representar esse cenário de forma adequada, uma vez qu
 
 Essa estrutura melhora a integridade dos dados, facilita manutenção futura e está em conformidade com os **princípios da normalização**, reduzindo redundância e prevenindo inconsistências.
 
-PS: Colocar imagem aqui
 
 ## Normalização
 
