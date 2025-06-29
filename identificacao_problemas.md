@@ -78,3 +78,15 @@ A nova modelagem permite representar esse cenário de forma adequada, uma vez qu
 Essa estrutura melhora a integridade dos dados, facilita manutenção futura e está em conformidade com os **princípios da normalização**, reduzindo redundância e prevenindo inconsistências.
 
 PS: Colocar imagem aqui
+
+## Normalização
+
+Foram aplicadas as quatro etapas da normalização com o objetivo de eliminar redundâncias, garantir a integridade dos dados e otimizar o modelo relacional.
+
+Na **Primeira Forma Normal (1FN)**, foram removidos os atributos multivalorados, como telefones, e-mails, especialidades e formas de pagamento. Esses dados foram separados em tabelas próprias, mantendo atomicidade nas colunas.
+
+Na **Segunda Forma Normal (2FN)**, eliminamos dependências parciais, como o caso das especialidades que dependiam apenas do médico, criando relacionamentos corretos entre as entidades.
+
+A **Terceira Forma Normal (3FN)** tratou as dependências transitivas, como informações de convênio, que foram isoladas em entidades específicas com chave própria, evitando redundância no pagamento.
+
+Por fim, aplicamos a **Forma Normal de Boyce-Codd (FNBC)**, assegurando que todas as dependências funcionais tenham como determinantes superchaves, garantindo um modelo relacional totalmente normalizado, consistente e preparado para consultas eficientes.
